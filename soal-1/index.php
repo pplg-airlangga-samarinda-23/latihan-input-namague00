@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Soal 1</title>
+    <title>Login</title>
 </head>
 <body>
-    <h1>Soal 1</h1>
-    <form method="post">
-        <input type="number" name="jarijari"> <br>
-        <input type="number" name="tinggi"> <br>
-        <button type="submit">Hitung Volume</button>
-        <button type="reset">Reset</button>
+    <form method = "POST">
+        <div>
+            <label>jari</label> <br>
+            <input name="jari-jari" type="number" placeholder="masukkan jari-jari  tabung">
+        </div>
+        <div>
+        <label>tinggi</label> <br>
+        <input name="tinggi" type="number" placeholder="masukkan tinggi tabung">
+        </div>
+        <div>
+            <button>hitung</button>
+        </div>
     </form>
+
     <?php
-        // tambahkan perhitungan volume tabung di sini
+
+    $pi = 3.14;
+    $jari= @$_POST['jari-jari'];
+    $tinggi=  @$_POST['tinggi'];
+    $hasil = ($pi*$jari*$jari* $tinggi);
+    echo "volume tabung adalah :" .$hasil;
     ?>
 </body>
 </html>
